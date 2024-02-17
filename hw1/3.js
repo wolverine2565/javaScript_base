@@ -1,30 +1,46 @@
 "use strict";
 
 /*
-Необходимо попросить пользователя ввести три числа.
-Необходимо создать функцию, в которую мы должны передать эти три числа.
-Функция должна определить максимальное, среди переданных ей значение и 
-вывести сообщение: "Максимальное значение среди чисел N1, N2, N3 равно N."
-
-Примечание: Условимся, что пользователь всегда вводит корректные значения, 
-три числа. Проверять их не нужно.
+Используя Math.random() необходимо сгенерировать массив, содержащий 5 цифр в 
+диапазоне [0, 9].
+После создания массива необходимо вывести в консоль следующие значения:
+1. Сумму элементов массива
+2. Минимальное значение в массиве
+3. Новый массив, содержащий индексы сгенерированного выше массива, в которых 
+значение равно 3.
+Пример: Если у нас сгенерировался массив [2, 3, 5, 7, 3], то мы должны вывести 
+в консоль массив [1, 4]. Такой массив получился потому что в сгенерированном
+массиве тройки лежат под индексами 1 и 4. Если троек в сгенерированном массиве
+не окажется, значит нужно будет вывести пустой массив.
 */
 
-function maxNum(a,b,c) {
-    let maxNummber
-    if (a > b && b > c) {
-        maxNummber = a;
-    } 
-    else if (b > a && a > c) {
-        maxNummber = b;
-    }
-    else maxNummber = c;
-    return maxNummber;
+// Здесь пишем решение, данный комментарий необходимо стереть.
+
+let randomDigitsArray = [];
+
+for (let i = 0; i < 5; i++) {
+    let randomDigit = Math.floor(Math.random() * 10); 
+    randomDigitsArray.push(randomDigit); 
 }
 
-function searchMaxnum() {
-    const a = Number(prompt(`Ввдедите первое число`))
-    const b = Number(prompt(`Ввдедите второе число`))
-    const c = Number(prompt(`Ввдедите третье число`))
-    alert(`Максимальное число равно ${maxNum(a,b,c)}`)
+console.log(randomDigitsArray); 
+
+let element = randomDigitsArray[0];
+for (let i = 0; i < randomDigitsArray.length; i++) {
+    element = element + randomDigitsArray[i]
 }
+
+console.log('Сумма элементов массива:', element);
+
+
+const min = Math.min(...randomDigitsArray);
+console.log('Минимальное значение в массиве:', min);
+
+const newArr = []
+let a = 0;
+for (let i = 0; i < randomDigitsArray.length; i++) {
+    if (randomDigitsArray[i] == 3) {
+        newArr.push(i)
+    };
+}
+console.log('Индексы с числом 3:', newArr);

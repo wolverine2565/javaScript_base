@@ -86,3 +86,72 @@
 //     askQuestion('лук', 'Сидит дед во 100 шуб одет, кто его раздевает, тот слезы проливает');
 //     askQuestion('елка', 'Зимой и летом одним цветов');
 // }
+
+//  let count = 0;
+//  while (count < 3) {
+//     console.log('Hello');
+//     count++;
+//  }
+
+//  for (let i = 0; i < 3; i++) {
+//     console.log('Hello');
+//  }
+
+//  for (let j = 0; j <= 2; j+5) {
+//     console.log(j);
+//  }
+
+// let pass;
+// let count = 0;
+// function passwdchk() {
+// do {
+//     if (count > 3) {alert('Пароль неверный')}
+//     pass = Number(prompt('Введите пароль'));
+//     count++;
+// } while (pass !== 234);}
+
+// const user = []
+
+// user.push(prompt('Введите ваше имя'))
+// user.push(prompt('Введите ваш возраст'))
+
+// console.log(user)
+
+// const numbers = [2,3,19,15]
+// console.log(numbers);
+// alert(`Запомни цифры ${numbers}`)
+
+// console.log(numbers.pop());
+// console.log(numbers);
+
+// const words = 'example';
+// const arrWord = words.split('');
+// const upWord = arrWord.pop();
+// arrWord.push(upWord.toLocaleUpperCase());
+// console.log(arrWord.join('')); 
+
+// const arr = [1,2,3,7,19]
+
+// for (let i = 0; i < arr.length; i++) {
+//     const element = arr[i];
+//      if (element >= 5) {
+//         console.log(element)
+//      } else {
+//         continue;
+//      }
+// }
+// console.log(arr.indexOf(3))
+
+const arrAnswers = ['елка', 'ёлка', 'ель']
+const userAnswer = prompt('Зимой и летом одним цветом')
+
+for (let i = 0; i < arrAnswers.length; i++) {
+    const element = arrAnswers[i];
+    if (element === userAnswer) {
+        console.log('Правильно');
+        break;
+    } else {
+         continue;
+    }
+    
+}
