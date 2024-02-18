@@ -191,3 +191,113 @@
 // productSale.text = 'Cтол'
 // console.log(productSale);
 // console.log(product)
+
+// const arr1 = [1,2,3];
+// const arr2 = [4,5,6];
+
+// function mergeArrays(arr1, arr2) {
+//     const result = [...arr1, ...arr2]
+//     return result;
+//     }  
+// console.log(mergeArrays(arr1,arr2))
+
+
+// function removeDuplicates (...arguments) {
+//     return arguments.filter((value, index) => arguments.indexOf(value) === index);
+//     // return arguments.filter(item => item > 3);
+// }
+
+// console.log(removeDuplicates(1,2,1,2,4,6,4,5,5,5,5,7,1,2,3,4,5,6,7,8,9));
+
+// const array1 = [1,2,1,2,4,6,4,5,5,5,5,7,1,2,3,4,5,6,7,8,9] 
+// const array2 = [30,52,53,10,41,46,75,54,52]
+// const text1 = 'example example';
+
+// function getEveNumbers(array) {
+//     return array.filter(item => item%2 == 0 );
+// }
+// function calculateAverage(array) {
+//     const avg = array.reduce((acc, curr) => acc + curr, 0)/ (array.length)
+//     return avg
+// }
+// function capitalizeFirstLetter(string) {
+//     const arr = string.split(' ').map(word => word.charAt(0).toUpperCase()+word.slice(1)).join(' ');
+//     return arr;
+// } 
+
+// function createcalculator (argument) {
+//     let value = argument;
+//     return {
+//          add:  (argument) => {value += argument},
+//          substract : (argument) => {value -= argument},
+//         result: function() {
+//             return value;
+//         }
+//     }
+// }
+
+// console.log(getEveNumbers(array1));
+// console.log(calculateAverage(array1));
+// console.log(capitalizeFirstLetter(text1));
+// const calc = createcalculator(5);
+// calc.add(5);
+// calc.substract(3);
+// console.log(calc.result()); 
+
+// function createGreeting (text) {
+//     let value = text;
+//     return `Hello, ${value}`;
+// }
+
+// console.log(createGreeting('world'));
+
+// function isPasswordChecker (passw) {
+//     if (String(passw).length < 8) {
+//         console.log(`Длина пароля меньше 8 символов`);
+//     } else {
+//         createPassword(passw);
+//     }    
+// }
+
+// function createPassword(passw) {
+//     console.log(`Пароль успешно создан`);
+// }
+
+// isPasswordChecker
+
+// 1) Дан массив const arr = [1, 5, 7, 9] 
+// с помощью Math.min и spread оператора, найти минимальное число в массиве, решение задание должно состоять из одной строки
+
+const arr = [1,5,7,9]
+
+function task1 (arr) {
+    const minNumber = Math.min(...arr);
+    console.log(minNumber)
+}
+// 2) Напишите функцию createCounter, 
+// которая создает счетчик и возвращает объект с двумя методами: increment и decrement. 
+// Метод increment должен увеличивать значение счетчика на 1, а метод decrement должен уменьшать значение счетчика на 1. 
+// Значение счетчика должно быть доступно только через методы объекта, а не напрямую.
+
+function createCounter(num) {
+    let value = num;
+    return{
+    increment: () => {value+=1;},
+    decrement: () => {value-=1;},
+    result : function() {
+        return value;
+    }
+    }
+}
+const counter = createCounter(1);
+
+function increment() {
+    counter.increment(1)
+}
+function decrement() {
+    counter.decrement(1)
+}
+function result() {
+    console.log(counter.result())
+}
+
