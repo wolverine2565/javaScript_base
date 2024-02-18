@@ -142,16 +142,52 @@
 // }
 // console.log(arr.indexOf(3))
 
-const arrAnswers = ['елка', 'ёлка', 'ель']
-const userAnswer = prompt('Зимой и летом одним цветом')
+// const arrAnswers = ['елка', 'ёлка', 'ель']
+// const userAnswer = prompt('Зимой и летом одним цветом')
 
-for (let i = 0; i < arrAnswers.length; i++) {
-    const element = arrAnswers[i];
-    if (element === userAnswer) {
-        console.log('Правильно');
-        break;
-    } else {
-         continue;
-    }
+// for (let i = 0; i < arrAnswers.length; i++) {
+//     const element = arrAnswers[i];
+//     if (element === userAnswer) {
+//         console.log('Правильно');
+//         break;
+//     } else {
+//          continue;
+//     }
     
-}
+// }
+
+
+// const product = {
+//     name: 'Table', 
+//     ProductPrice: 200,
+//     count: 2,
+//     buy: function() { if (product.count >0 ) {
+//         console.log('Вы купили данный товар');
+//         product.count = product.count - 1;
+//         } else {
+//         console.log('Товара нет в наличии')
+//         }
+//     },
+//     userRegistred: false,
+//     buyProduct: function () {
+//         if (this.userRegistred) {
+//             this.buy();
+//         } else {
+//             console.log('Сначала зарегистрируйтесь');
+//         }
+//     },
+//     reg: function() {
+//         if (product.userRegistred) {
+//             console.log('Вы уже зарегистрированы');            
+//         } else {
+//             console.log('Успешная регистрация');
+//             this.userRegistred = true;
+//         }
+//     }
+// }
+// product.buy()
+// let productSale = product;
+// console.log(product);
+// productSale.text = 'Cтол'
+// console.log(productSale);
+// console.log(product)
