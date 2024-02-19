@@ -268,36 +268,220 @@
 // 1) Дан массив const arr = [1, 5, 7, 9] 
 // с помощью Math.min и spread оператора, найти минимальное число в массиве, решение задание должно состоять из одной строки
 
-const arr = [1,5,7,9]
+// const arr = [1,5,7,9]
 
-function task1 (arr) {
-    const minNumber = Math.min(...arr);
-    console.log(minNumber)
-}
+// function task1 (arr) {
+//     const minNumber = Math.min(...arr);
+//     console.log(minNumber)
+// }
 // 2) Напишите функцию createCounter, 
 // которая создает счетчик и возвращает объект с двумя методами: increment и decrement. 
 // Метод increment должен увеличивать значение счетчика на 1, а метод decrement должен уменьшать значение счетчика на 1. 
 // Значение счетчика должно быть доступно только через методы объекта, а не напрямую.
 
-function createCounter(num) {
-    let value = num;
-    return{
-    increment: () => {value+=1;},
-    decrement: () => {value-=1;},
-    result : function() {
-        return value;
-    }
-    }
-}
-const counter = createCounter(1);
+// function createCounter(num) {
+//     let value = num;
+//     return{
+//     increment: () => {value+=1;},
+//     decrement: () => {value-=1;},
+//     result : function() {
+//         return value;
+//     }
+//     }
+// }
+// const counter = createCounter(1);
 
-function increment() {
-    counter.increment(1)
-}
-function decrement() {
-    counter.decrement(1)
-}
-function result() {
-    console.log(counter.result())
+// function increment() {
+//     counter.increment(1)
+// }
+// function decrement() {
+//     counter.decrement(1)
+// }
+// function result() {
+//     console.log(counter.result())
+// }
+
+// const Person = {
+//     _name: "",
+//     age: 0,
+//     gender: "",
+//     introduce() {
+//         console.log(`Hello, my name is ${this._name}, i'm ${this.age} years old, my gender is ${this.gender}`)
+//     },
+//     changeName(newName) {
+//         this._name = newName;
+//     },
+//     changeAge(newAge) {
+//         if (newAge < 0) {
+//             console.log('Error')
+//         }
+//         else {
+//             this.age = newAge;
+//         }
+//     },
+//     changeGender(newGender) {
+//         if (newGender != 'male' || newGender != 'female') {
+//             console.log('Error')
+//         } else {
+//             this.gender = newGender;
+//         }
+//     }
+// }
+
+// Person._name = 'Mary'
+// Person.age = 25
+// Person.gender = 'female'
+
+// const Animal = {
+//     _name: '',
+//     eat() {
+//         console.log(`${this._name} is eating`)
+//     }
+// }
+
+// const dog = {
+//     _name: '',
+//     bark() {
+//         console.log(`Bark, bark`)
+//     }
+// }
+
+// dog._name = 'Rex'
+// dog.eat = Animal.eat;
+// dog.eat()
+
+
+// const calculator = {
+//     add(num1, num2) {
+//         return (num1 + num2)
+//     }
+//     ,substract() {
+//         return(num1 - num2)
+//     }
+//     ,multiply() {
+//         return(num1 * num2)
+//     }
+//     ,divide(num1, num2) {
+//         if (num2 != 0) {
+//             return(num1/num2)
+//         } else {
+//             console.log('Division by zero!')            
+//         }
+//     }
+// }
+
+
+// class Person {
+//     constructor (_name, age, gender) {
+//         this._name = _name
+//         this.age = age
+//         this.gender = gender
+//     }
+//     introduce() {
+//         console.log(`Hello, my name is ${this._name}, i'm ${this.age} years old, my gender is ${this.gender}`)
+//     }
+//     changeName(newName) {
+//         this._name = newName;
+//     }
+//     changeAge(newAge) {
+//         if (newAge < 0) {
+//             console.log('Error')
+//         }
+//         else {
+//             this.age = newAge;
+//         }
+//     }
+//     changeGender(newGender) {
+//         if (newGender != 'male' || newGender != 'female') {
+//             console.log('Error')
+//         } else {
+//             this.gender = newGender;
+//         }
+//     }
+// }
+
+// const mary = new Person ('Masha', 20, 'female');
+// const anton = new Person ('Anton', 25, 'male');
+// mary.introduce()
+// anton.introduce()
+// anton.age = mary.age;
+// anton.introduce()
+
+// class BankAccount {
+//     constructor(accountNumber, balance = 0 ) {
+//         this.accountNumber = accountNumber;
+//         this.balance = balance;
+    
+//     }
+//     deposit(summ) {
+//         this.balance = this.balance + summ;
+//         console.log(`Вы пополнили счет на ${summ} долларов, ваш баланс: ${this.balance} долларов`)
+//     }
+//     withdraw(summ) { 
+//         if (this.balance>summ) {
+//             this.balance = this.balance - summ;
+//             console.log(`Вы снаяли со счета ${summ} долларов, ваш баланс: ${this.balance} долларов`)
+//         } else {
+//             console.log(`Запрошенная сумма больше вашего баланса`)
+//         }
+//     }
+//     balanceCheck() {
+//         console.log(`Ваш баланс: ${this.balance} долларов`)
+//     }
+// }
+
+// const acc1 = new BankAccount(1, 1000);
+
+// acc1.balanceCheck()
+
+
+
+
+
+
+
+// Задание 1: ""Управление библиотекой книг""
+
+// Реализуйте класс Book, представляющий книгу, со следующими свойствами и методами:
+
+class book {
+    constructor (title, author, pages) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+    }
+    displayinfo() {
+        console.log(`Название книги: ${this.title},автор:${this.author}, количество страниц:${this.pages}`)
+    }
 }
 
+const unknowhBook = new book(null, null, 100)
+
+// Задание 2: ""Управление списком студентов""
+// Реализуйте класс Student, представляющий студента, со следующими свойствами и методами:
+
+// Свойство name (имя) - строка, имя студента.
+// Свойство age (возраст) - число, возраст студента.
+// Свойство grade (класс) - строка, класс, в котором учится студент.
+// Метод displayInfo() - выводит информацию о студенте (имя, возраст и класс).
+// javascript
+
+class Student {
+    constructor(name, age, grade) {
+        this.name = name;
+        this.age = age;
+        this.grade = grade;
+    }
+    displayinfo() {
+        console.log (`Имя: ${this.name} Возраст:${this.age} Класс:${this.grade} `)
+    }
+}
+
+const newStudent = new Student('Студент', 23, '4')
+
+function task1() {
+    return unknowhBook.displayinfo()
+}
+function task2() {
+    return newStudent.displayinfo()
+}
