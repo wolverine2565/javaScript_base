@@ -440,48 +440,250 @@
 
 
 
-// Задание 1: ""Управление библиотекой книг""
+// // Задание 1: ""Управление библиотекой книг""
 
-// Реализуйте класс Book, представляющий книгу, со следующими свойствами и методами:
+// // Реализуйте класс Book, представляющий книгу, со следующими свойствами и методами:
 
-class book {
-    constructor (title, author, pages) {
-        this.title = title;
-        this.author = author;
-        this.pages = pages;
-    }
-    displayinfo() {
-        console.log(`Название книги: ${this.title},автор:${this.author}, количество страниц:${this.pages}`)
-    }
-}
+// class book {
+//     constructor (title, author, pages) {
+//         this.title = title;
+//         this.author = author;
+//         this.pages = pages;
+//     }
+//     displayinfo() {
+//         console.log(`Название книги: ${this.title},автор:${this.author}, количество страниц:${this.pages}`)
+//     }
+// }
 
-const unknowhBook = new book(null, null, 100)
+// const unknowhBook = new book(null, null, 100)
 
-// Задание 2: ""Управление списком студентов""
-// Реализуйте класс Student, представляющий студента, со следующими свойствами и методами:
+// // Задание 2: ""Управление списком студентов""
+// // Реализуйте класс Student, представляющий студента, со следующими свойствами и методами:
 
-// Свойство name (имя) - строка, имя студента.
-// Свойство age (возраст) - число, возраст студента.
-// Свойство grade (класс) - строка, класс, в котором учится студент.
-// Метод displayInfo() - выводит информацию о студенте (имя, возраст и класс).
-// javascript
+// // Свойство name (имя) - строка, имя студента.
+// // Свойство age (возраст) - число, возраст студента.
+// // Свойство grade (класс) - строка, класс, в котором учится студент.
+// // Метод displayInfo() - выводит информацию о студенте (имя, возраст и класс).
+// // javascript
 
-class Student {
-    constructor(name, age, grade) {
+// class Student {
+//     constructor(name, age, grade) {
+//         this.name = name;
+//         this.age = age;
+//         this.grade = grade;
+//     }
+//     displayinfo() {
+//         console.log (`Имя: ${this.name} Возраст:${this.age} Класс:${this.grade} `)
+//     }
+// }
+
+// const newStudent = new Student('Студент', 23, '4')
+
+// function task1() {
+//     return unknowhBook.displayinfo()
+// }
+// function task2() {
+//     return newStudent.displayinfo()
+// }
+
+// function getPrototypeChain(obj) {
+//     const arr = [];
+
+//     let currentObj = obj;
+
+//     while (currentObj !== null) {
+//         arr.push(currentObj);
+//         currentObj = Object.getPrototypeOf(currentObj);
+//     }
+//     return arr;
+// }
+
+
+// const MusicSeries = {
+//     model: 'music series',
+//     power: 200,
+//     batterySize: 2000,
+//     boxSize: 0.5,
+//     workTime: 45,
+//     startWipe() {
+//         console.log('Method of MusicSeries');
+//     }
+// }
+
+// const Blues = {
+//     model: 'Blues-1',
+//     power: 250,
+//     batterySize: 2500,
+//     workTime: 50
+// }
+
+// Object.setPrototypeOf(Blues, MusicSeries);
+
+
+// const prototypeChain = getPrototypeChain(Blues);
+// console.log(prototypeChain);
+
+// class Animal {
+//     constructor (name) {
+//         this.name = name
+//       }
+//     speak() {
+//         console.log(`Животное ${this.name} издает звук`)
+//     }
+// }
+
+// class dog extends Animal {
+//     constructor(name, breed) {
+//         super(name);
+//         this.breed = breed;
+//     }
+//     fetch() {
+//     console.log(`Собака ${this.name} породы ${this.breed} принесла мяч`)
+
+//     }
+// }
+
+// const hasky = new dog('Зюзя','Хаски');
+// hasky.speak();
+// hasky.fetch();
+
+// class product {
+//     constructor(name, price) {
+//         this.name = name;
+//         this.price = price;
+//     }
+// }
+
+// class shoppingCart {
+//     constructor(customerName, initialTotalCost = 0) {
+//         this.customerName = customerName;
+//         this.initialTotalCost = initialTotalCost;
+//         this.totalCost = initialTotalCost;
+//     }
+//     arr1 = []
+    
+//     addItem(product, quantity = 1) {
+//         this.totalCost = this.totalCost + product.price * quantity;
+//         this.arr1.push(product.name);
+//     }
+    
+//     checkout() {
+//         console.log(`Заказ оформлен для покупателя ${this.customerName} на общую стоимость ${this.totalCost}. Содержимое заказа: ${(this.arr1)}`)
+//     }
+// }
+
+// const jeans = new product('Джинсы', '2000');
+// const t_shirt = new product('Футболка', '1000')
+// const cart1 = new shoppingCart('Покупатель');
+
+// cart1.addItem(jeans, 2);
+// cart1.addItem(t_shirt, 2)
+// cart1.checkout();
+
+
+
+
+
+// Задание 1: ""Управление персоналом компании""
+
+// Реализуйте класс Employee (сотрудник), который имеет следующие свойства и методы:
+
+// Свойство name (имя) - строка, имя сотрудника.
+// Метод displayInfo() - выводит информацию о сотруднике (имя).
+// Реализуйте класс Manager (менеджер), который наследует класс Employee и имеет дополнительное свойство и метод:
+
+// Свойство department (отдел) - строка, отдел, в котором работает менеджер.
+// Метод displayInfo() - переопределяет метод displayInfo() родительского класса и выводит информацию о менеджере (имя и отдел).
+// // Пример использования классов
+// const employee = new Employee(""John Smith"");
+// employee.displayInfo();
+// // Вывод:
+// // Name: John Smith
+// const manager = new Manager(""Jane Doe"", ""Sales"");
+// manager.displayInfo();
+// // Вывод:
+// // Name: Jane Doe
+// // Department: Sales
+
+class Employee {
+    constructor (name) {
         this.name = name;
-        this.age = age;
-        this.grade = grade;
     }
-    displayinfo() {
-        console.log (`Имя: ${this.name} Возраст:${this.age} Класс:${this.grade} `)
+    displayInfo() {
+        console.log(`Name: ${this.name}`)
     }
 }
 
-const newStudent = new Student('Студент', 23, '4')
+class Manager extends Employee {
+    constructor (name, department) {
+        super(name)
+        this.department = department
+    }
+    displayInfo() {
+        console.log(`Name: ${this.name}, deparment: ${this.department}`)
+    }
+}
+
+const Jonh = new Employee('Jonh');
+const Jane = new Manager('Jane', 'Support');
 
 function task1() {
-    return unknowhBook.displayinfo()
+    Jonh.displayInfo();
+    Jane.displayInfo();
 }
+
+
+
+// ""Управление списком заказов""
+
+// Реализуйте класс Order (заказ), который имеет следующие свойства и методы:
+
+// Свойство orderNumber (номер заказа) - число, уникальный номер заказа.
+// Свойство products (продукты) - массив, содержащий список продуктов в заказе.
+// Метод addProduct(product) - принимает объект product и добавляет его в список продуктов заказа.
+// Метод getTotalPrice() - возвращает общую стоимость заказа, основанную на ценах продуктов.
+// // Пример использования класса
+// class Product {
+// constructor(name, price) {
+// this.name = name;
+// this.price = price;
+// }
+// }
+// const order = new Order(12345);
+// const product1 = new Product(""Phone"", 500);
+// order.addProduct(product1);
+// const product2 = new Product(""Headphones"", 100);
+// order.addProduct(product2);
+// console.log(order.getTotalPrice()); // Вывод: 600
+
+class Product {
+    constructor(name, price) {
+        this.name = name;
+        this.price = price;
+    }
+}
+
+class Order {
+    constructor (orderNumber, products = [], totalprice = 0) {
+        this.orderNumber = orderNumber;
+        this.products = products;
+        this.totalprice = totalprice
+    }
+    addproduct(product) {
+        this.products.push(product.name)
+        this.totalprice = this.totalprice + product.price
+        console.log(`${product.name} added to order,total: ${this.totalprice} USD`)
+    }
+    getTotalPrice() {
+        console.log(`Your order is: ${this.products}, total price is ${this.totalprice} USD`)
+    }
+}
+const iPhone = new Product('iphone', 1000)
+const headPhones = new Product('HeadPhones', 100)
+const order324 = new Order(324)
+
 function task2() {
-    return newStudent.displayinfo()
+    order324.addproduct(iPhone);
+    order324.addproduct(headPhones);
+    order324.getTotalPrice();
 }
