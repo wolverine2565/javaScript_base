@@ -142,11 +142,11 @@
 // }
 // console.log(arr.indexOf(3))
 
-// const arrAnswers = ['елка', 'ёлка', 'ель']
+// const elemswers = ['елка', 'ёлка', 'ель']
 // const userAnswer = prompt('Зимой и летом одним цветом')
 
-// for (let i = 0; i < arrAnswers.length; i++) {
-//     const element = arrAnswers[i];
+// for (let i = 0; i < elemswers.length; i++) {
+//     const element = elemswers[i];
 //     if (element === userAnswer) {
 //         console.log('Правильно');
 //         break;
@@ -195,11 +195,11 @@
 // const arr1 = [1,2,3];
 // const arr2 = [4,5,6];
 
-// function mergeArrays(arr1, arr2) {
+// function mergetaskss(arr1, arr2) {
 //     const result = [...arr1, ...arr2]
 //     return result;
 //     }  
-// console.log(mergeArrays(arr1,arr2))
+// console.log(mergetaskss(arr1,arr2))
 
 
 // function removeDuplicates (...arguments) {
@@ -209,15 +209,15 @@
 
 // console.log(removeDuplicates(1,2,1,2,4,6,4,5,5,5,5,7,1,2,3,4,5,6,7,8,9));
 
-// const array1 = [1,2,1,2,4,6,4,5,5,5,5,7,1,2,3,4,5,6,7,8,9] 
-// const array2 = [30,52,53,10,41,46,75,54,52]
+// const tasks1 = [1,2,1,2,4,6,4,5,5,5,5,7,1,2,3,4,5,6,7,8,9] 
+// const tasks2 = [30,52,53,10,41,46,75,54,52]
 // const text1 = 'example example';
 
-// function getEveNumbers(array) {
-//     return array.filter(item => item%2 == 0 );
+// function getEveNumbers(tasks) {
+//     return tasks.filter(item => item%2 == 0 );
 // }
-// function calculateAverage(array) {
-//     const avg = array.reduce((acc, curr) => acc + curr, 0)/ (array.length)
+// function calculateAverage(tasks) {
+//     const avg = tasks.reduce((acc, curr) => acc + curr, 0)/ (tasks.length)
 //     return avg
 // }
 // function capitalizeFirstLetter(string) {
@@ -236,8 +236,8 @@
 //     }
 // }
 
-// console.log(getEveNumbers(array1));
-// console.log(calculateAverage(array1));
+// console.log(getEveNumbers(tasks1));
+// console.log(calculateAverage(tasks1));
 // console.log(capitalizeFirstLetter(text1));
 // const calc = createcalculator(5);
 // calc.add(5);
@@ -605,85 +605,357 @@
 // // Name: Jane Doe
 // // Department: Sales
 
-class Employee {
-    constructor (name) {
-        this.name = name;
-    }
-    displayInfo() {
-        console.log(`Name: ${this.name}`)
-    }
-}
+// class Employee {
+//     constructor (name) {
+//         this.name = name;
+//     }
+//     displayInfo() {
+//         console.log(`Name: ${this.name}`)
+//     }
+// }
 
-class Manager extends Employee {
-    constructor (name, department) {
-        super(name)
-        this.department = department
-    }
-    displayInfo() {
-        console.log(`Name: ${this.name}, deparment: ${this.department}`)
-    }
-}
+// class Manager extends Employee {
+//     constructor (name, department) {
+//         super(name)
+//         this.department = department
+//     }
+//     displayInfo() {
+//         console.log(`Name: ${this.name}, deparment: ${this.department}`)
+//     }
+// }
 
-const Jonh = new Employee('Jonh');
-const Jane = new Manager('Jane', 'Support');
+// const Jonh = new Employee('Jonh');
+// const Jane = new Manager('Jane', 'Support');
+
+// function task1() {
+//     Jonh.displayInfo();
+//     Jane.displayInfo();
+// }
+
+
+
+// // ""Управление списком заказов""
+
+// // Реализуйте класс Order (заказ), который имеет следующие свойства и методы:
+
+// // Свойство orderNumber (номер заказа) - число, уникальный номер заказа.
+// // Свойство products (продукты) - массив, содержащий список продуктов в заказе.
+// // Метод addProduct(product) - принимает объект product и добавляет его в список продуктов заказа.
+// // Метод getTotalPrice() - возвращает общую стоимость заказа, основанную на ценах продуктов.
+// // // Пример использования класса
+// // class Product {
+// // constructor(name, price) {
+// // this.name = name;
+// // this.price = price;
+// // }
+// // }
+// // const order = new Order(12345);
+// // const product1 = new Product(""Phone"", 500);
+// // order.addProduct(product1);
+// // const product2 = new Product(""Headphones"", 100);
+// // order.addProduct(product2);
+// // console.log(order.getTotalPrice()); // Вывод: 600
+
+// class Product {
+//     constructor(name, price) {
+//         this.name = name;
+//         this.price = price;
+//     }
+// }
+
+// class Order {
+//     constructor (orderNumber, products = [], totalprice = 0) {
+//         this.orderNumber = orderNumber;
+//         this.products = products;
+//         this.totalprice = totalprice
+//     }
+//     addproduct(product) {
+//         this.products.push(product.name)
+//         this.totalprice = this.totalprice + product.price
+//         console.log(`${product.name} added to order,total: ${this.totalprice} USD`)
+//     }
+//     getTotalPrice() {
+//         console.log(`Your order is: ${this.products}, total price is ${this.totalprice} USD`)
+//     }
+// }
+// const iPhone = new Product('iphone', 1000)
+// const headPhones = new Product('HeadPhones', 100)
+// const order324 = new Order(324)
+
+// function task2() {
+//     order324.addproduct(iPhone);
+//     order324.addproduct(headPhones);
+//     order324.getTotalPrice();
+// }
+
+// function delayedMessage(message, delay) {
+//     setTimeout(() => console.log(message), delay);
+// }
+
+// delayedMessage('Сообщение 1', 2000);
+// delayedMessage('Сообщение 2', 1000);
+// delayedMessage('Сообщение 3', 3000);
+
+
+// const tasks = [
+//     {name: 'task 1', time: 1000},
+//     {name: 'task 2', time: 2000},
+//     {name: 'task 3', time: 3000},
+//     {name: 'task 4', time: 4000},
+//     {name: 'task 5', time: 5000},
+// ];
+
+
+// console.log(tasks[0].time);
+
+// function taskSheduler(task, delay) {
+//     setTimeout(() => console.log(`${task} - ${delay}`), delay)   
+// };
+
+// for (let i = 0; i < tasks.length; i++) {
+//     taskSheduler(tasks[i].name, tasks[i].time);
+// };
+
+
+
+// tasks.forEach(element => {
+//     taskSheduler(element.name, element.time)
+
+// });
+
+
+// let count = 0;
+
+// for (let i = 0; i < tasks.length; i++) {
+//     count += tasks[i].time;
+//     taskSheduler(tasks[i].name, count)
+// };
+
+
+
+// function loadData(url) {
+//     const xhr = new XMLHttpRequest();
+//     xhr.onreadystatechange = function() {
+//         if (xhr.status !==200) { //если статус не 200, то произошла ошибка
+//             console.log(`Error ${xhr.status}: ${xhr.statusText}`);
+//         } else {
+//             console.log(`user ${xhr.response}`); // response - это ответ сервера
+//         }
+//     };
+//     xhr.open('GET', url, true);
+//     xhr.send();
+// }
+// loadData('https://jsonplaceholder.typicode.com/users')
+
+
+// async function name() {
+
+// }
+
+// const xhr = new XMLHttpRequest();
+
+// xhr.open('GET', 'http://api.github.com/users/octocat')
+
+// xhr.send();
+
+// xhr.onload = function() {
+//     if (xhr.status != 200) { 
+//         console.log(`Error ${xhr.status}: ${xhr.statusText}`);
+//     } else {
+//         console.log(`user: ${xhr.response}`);
+//     }
+// };
+
+// xhr.onprogress = function(event) {
+//     console.log(`Get from server ${event.loaded}`);
+// };
+
+// xhr.onerror = function() {
+//     console.log(`Request error`)
+// };
+
+// Объект JSON //
+// const student = {
+//     name: 'Slava',
+//     surname: 'Belkin',
+//     age: 20,
+//     practice:{
+//         place: 'IKTG',
+//         hours:47,
+//     }
+// };
+
+// console.log(JSON.stringify(student, null, 4));
+
+
+// console.log(JSON.parse(`{"name": "Slava", "surname": "Belkin","age": 20, "practice": { "place": "IKTG", "hours": 47 }}`))
+
+
+// const getUser = async (url)=> {
+//     const response = await fetch(url);
+//     const user = await response.text();
+//     console.log(user);
+// }
+
+// getUser('http://api.github.com/users/octocat')
+
+// const response1 = async(url) {
+//     const response = await fetch(url);
+//     const text1 = await response.text();
+//     console.log(text1);
+// }
+
+
+// fetch('https://jsonplaceholder.typicode.com/users')
+// .then((response1) => response1.json())
+// ;.then((data) => console.log(answer));
+
+// fetch(`https://jsonplaceholder.typicode.com/users`)
+//     .then((response) => response.json())
+//     .then((elem) => listUser(elem));
+
+// const userListC = document.querySelector(`userList`)
+// function listUser(elem) {
+//     userArr = [];
+//     for (let i = 0; i< elem.length; i++) {
+//         userArr.push(elem[i].name);
+//         userListC.innerHTML += elem[i].name + '<br>';
+//     };
+
+//     userArr = userArr.sort();
+//     userListC.innerHTML +='<br>'
+
+//     for (let i = 0; i < userArr.length; i++) {
+//         userListC.innerHTML += userArr[i] + '<br>'; 
+//     }
+// };
+
+
+
+// ""Получение данных о пользователе""
+
+// Реализуйте функцию getUserData, которая принимает идентификатор пользователя (ID) 
+// в качестве аргумента и использует fetch для получения данных о пользователе с заданным ID с удаленного сервера. 
+// Функция должна возвращать промис, который разрешается с данными о пользователе в виде объекта. 
+// Если пользователь с указанным ID не найден, промис должен быть отклонен с соответствующим сообщением об ошибке.
+// Подсказка, с последовательностью действий:
+// getUserData использует fetch для получения данных о пользователе с удаленного сервера. 
+// Если запрос успешен (с кодом 200), функция извлекает данные из ответа с помощью response.json() и возвращает объект с данными о пользователе. 
+// Если запрос неуспешен, функция отклоняет промис с сообщением об ошибке.
+
+function getUserData(userID) {
+    return new Promise((resolve, reject) => {
+        fetch(`https://jsonplaceholder.typicode.com/users/${userID}`)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('User not found');
+                }
+                return response.json();
+            })
+            .then(userData => {
+                resolve(userData);
+            })
+            .catch(error => {
+                reject(error.message);
+            });
+    });
+}
 
 function task1() {
-    Jonh.displayInfo();
-    Jane.displayInfo();
+    const userID = prompt(`Введите id пользователя`)
+    getUserData(userID)
+    .then(userData => {
+        console.log('Name:', userData.name);
+        console.log('email:', userData.email);
+        console.log('address:', userData.address);
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
 }
 
 
+// ""Отправка данных на сервер""
+// Реализуйте функцию saveUserData, 
+// которая принимает объект с данными о пользователе в качестве аргумента 
+// и использует fetch для отправки этих данных на удаленный сервер для сохранения. 
+// Функция должна возвращать промис, который разрешается, если данные успешно отправлены, или отклоняется в случае ошибки.
+// *Подсказка *
+// // Пример использования функции
+// const user = {
+// name: 'John Smith',
+// age: 30,
+// email: 'john@example.com'
+// };
+// saveUserData(user)
+// .then(() => {
+// console.log('User data saved successfully');
+// })
+// .catch(error => {
+// console.log(error.message);
+// });
+// saveUserData использует fetch для отправки данных о пользователе на удаленный сервер для сохранения. 
+// Она отправляет POST-запрос на URL-адрес /users с указанием типа 
+// содержимого application/json и сериализует объект с данными о пользователе в JSON-строку с помощью JSON.stringify(). 
+// Если запрос успешен (с кодом 200), функция разрешает промис. Если запрос неуспешен, функция отклоняет промис с сообщени
 
-// ""Управление списком заказов""
-
-// Реализуйте класс Order (заказ), который имеет следующие свойства и методы:
-
-// Свойство orderNumber (номер заказа) - число, уникальный номер заказа.
-// Свойство products (продукты) - массив, содержащий список продуктов в заказе.
-// Метод addProduct(product) - принимает объект product и добавляет его в список продуктов заказа.
-// Метод getTotalPrice() - возвращает общую стоимость заказа, основанную на ценах продуктов.
-// // Пример использования класса
-// class Product {
-// constructor(name, price) {
-// this.name = name;
-// this.price = price;
-// }
-// }
-// const order = new Order(12345);
-// const product1 = new Product(""Phone"", 500);
-// order.addProduct(product1);
-// const product2 = new Product(""Headphones"", 100);
-// order.addProduct(product2);
-// console.log(order.getTotalPrice()); // Вывод: 600
-
-class Product {
-    constructor(name, price) {
-        this.name = name;
-        this.price = price;
-    }
+function saveUserData(userData) {
+    return new Promise((resolve, reject) => {
+        fetch('https://jsonplaceholder.typicode.com/users', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(userData)
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Failed to save user data');
+            }
+            resolve();
+        })
+        .catch(error => {
+            reject(error);
+        });
+    });
 }
 
-class Order {
-    constructor (orderNumber, products = [], totalprice = 0) {
-        this.orderNumber = orderNumber;
-        this.products = products;
-        this.totalprice = totalprice
-    }
-    addproduct(product) {
-        this.products.push(product.name)
-        this.totalprice = this.totalprice + product.price
-        console.log(`${product.name} added to order,total: ${this.totalprice} USD`)
-    }
-    getTotalPrice() {
-        console.log(`Your order is: ${this.products}, total price is ${this.totalprice} USD`)
-    }
-}
-const iPhone = new Product('iphone', 1000)
-const headPhones = new Product('HeadPhones', 100)
-const order324 = new Order(324)
 
 function task2() {
-    order324.addproduct(iPhone);
-    order324.addproduct(headPhones);
-    order324.getTotalPrice();
+    const user = {
+        name: 'John Smith',
+        age: 30,
+        email: 'john@example.com'
+    };
+    
+    saveUserData(user)
+        .then(() => {
+            console.log('User data saved successfully');
+        })
+        .catch(error => {
+            console.error(error.message);
+        });
 }
+
+
+// Напишите функцию changeStyleDelayed, которая принимает идентификатор элемента и время задержки (в миллисекундах) в качестве аргументов. 
+// Функция должна изменить стиль элемента через указанное время.
+// // Пример использования функции
+// changeStyleDelayed('myElement', 2000); // Через 2 секунды изменяет стиль элемента с id 'myElement'"
+
+
+function changeStyleDelayed(elementId, delay) {
+    setTimeout(() => {
+        const element = document.getElementById(elementId);
+        if (element) {
+            element.style.color = 'red'; 
+        } else {
+            console.error('Элемент с указанным идентификатором не найден.');
+        }
+    }, delay);
+}
+
+function task3() {
+    changeStyleDelayed('myElement', 2000);
+}
+
